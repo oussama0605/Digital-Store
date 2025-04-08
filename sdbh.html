@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PayPal JS SDK Standard Integration</title>
+    </head>
+    <body>
+        <style>
+            .paypal {
+                display: flex;
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                width: 100px;
+                margin-left: 10px;
+                left: 17px;
+            }
+        </style>
+        <div id="paypal-button-container" class="paypal"></div>
+        <p id="result-message"></p>  
+        <!-- Initialize the JS-SDK -->
+        <script src="https://www.paypal.com/sdk/js?client-id=Ad1TiNLYOVxUzkvRUqo5BeJ6D0ui_uV4grNrgBQUf7Iqjidzohm3s6nL-PMY2BcTnftFzYg_lTNTQIE6&currency=USD"></script>
+        
+        <script src="server.js"></script>
+    </body>
+</html>

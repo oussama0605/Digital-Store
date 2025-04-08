@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محفظة المشتريات</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container_bar">
+            <a href="html.html" class="logo">Digital<span>Store </span> </a>
+            <nav class="navbar">
+                <div class="remove">
+                    <i class="fa-classic fa-solid fa-xmark fa-fw"></i>
+                </div>
+                <a href="html.html">الرئيسية</a>
+                <a href="productss.html">المنتجات</a>
+                <a href="wallet.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="wallet" class="wallet-section">
+            <h2>المنتجات التي تم شراؤها</h2>
+            <div class="wallet-summary">
+                <p>إجمالي المشتريات: <span id="total-amount">$0.00</span></p>
+                <p>عدد المنتجات: <span class="total-products">0</span></p>
+            </div>
+            <div class="rem">
+                <button class="rmpr">remove products</button>
+                <div id="paypal-button-container" >
+                </div>
+            </div>
+        </section>
+        <div class="purchased-products">
+            <!-- سيتم عرض المنتجات المشتراة هنا -->
+        </div>
+    </main>
+    
+    <script src="https://www.paypal.com/sdk/js?client-id=Ad1TiNLYOVxUzkvRUqo5BeJ6D0ui_uV4grNrgBQUf7Iqjidzohm3s6nL-PMY2BcTnftFzYg_lTNTQIE6&currency=USD"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
+
+
+

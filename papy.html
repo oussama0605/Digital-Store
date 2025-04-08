@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPal Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #333;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #0070ba;
+        }
+        .paypal-button {
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+    <script src="https://www.paypal.com/sdk/js?client-id=1234567890-09876543"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Pay with PayPal</h1>
+        <p>Complete your payment securely using PayPal.</p>
+        <div class="credit-card-info--form">
+            <div class="input_container">
+                <label for="password_field" class="input_label">Card holder full name</label>
+                <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title" placeholder="Enter your full name">
+                <style>
+                    .input_container {
+                        margin-bottom: 20px;
+                    }
+                    .input_label {
+                        position: relative;
+                        display: block;
+                        margin-bottom: 5px;
+                        font-weight: bold;
+                        color: #333;
+                        left: 5px;
+                    }
+                    .input_field {
+                        width: 99%;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                        font-size: 16px;
+                    }
+                    .split {
+                        display: flex;
+                        gap: 10px;
+                        justify-content: space-between;
+                    }
+                    .split input {
+                        width: 48%;
+                    }
+                </style>
+            </div>
+            <div class="input_container">
+              <label for="password_field" class="input_label">Card Number</label>
+              <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title" placeholder="0000 0000 0000 0000">
+                <style>
+                    .input_container {
+                        margin-bottom: 20px;
+                    }
+                    .input_label {
+                        position: relative;
+                        display: block;
+                        margin-bottom: 5px;
+                        font-weight: bold;
+                        color: #333;
+                        left: 5px;
+                    }
+                    .input_field {
+                        width: 93%;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: 1px solid #ccc;
+                        font-size: 16px;
+                    }
+                    .split {
+                        display: flex;
+                        gap: 10px;
+                        justify-content: space-between;
+                    }
+                </style>
+            </div>
+            <div class="input_container">
+                <label for="password_field" class="input_label">Expiry Date / CVV</label>
+                <div class="split">
+                   <input id="password_field" class="input_field" type="text" name="input-name" title="Expiry Date" placeholder="01/23">
+                   <input id="password_field" class="input_field" type="number" name="cvv" title="CVV" placeholder="CVV">
+                </div>
+            </div>
+        </div>
+        <button id="paypal-button-container" class="paypal-button">Buy</button>
+        <style>
+            .paypal-button {
+                background-color: #0070ba;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+            }
+            .paypal-button:hover {
+                background-color: #005f8a;
+            }
+            .separator {
+                margin: 20px 0;
+                display: flex;
+                align-items: center;
+            }
+        </style>
+    </div>
+    <div id="paypal-buttons-container"></div>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&components=YOUR_COMPONENTS"></script>
+    <script>
+        paypal.Buttons({
+            message: {
+              amount: 100,
+              align: 'center',
+              color: 'black',
+              position: 'top',
+            }
+          }).render('#paypal-button-container');
+    </script>
+</body>
+</html>
+

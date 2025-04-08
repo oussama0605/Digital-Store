@@ -1,0 +1,395 @@
+/* المتغيرات */
+:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #f5f7ff;
+    --dark-color: #1a1a1a;
+    --light-color: #f8f9fa;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --border-radius: 8px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* التنسيق العام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+.filter-optionn{
+    display: flex;
+    list-style: none;
+}
+
+body {
+    overflow: scroll;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 5px;
+
+}
+.navbar{
+    display: flex;
+}
+
+.container_bar{
+    width: 90%;
+    max-width: 1200px;
+    padding: 0;
+}
+
+/* شريط التنقل */
+.header {
+    background-color: rgb(254, 254, 254);
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding-right: 10px;
+    padding: auto p ;
+}
+
+.logo {
+    margin-right: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark-color);
+    text-decoration: none;
+
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+.remove{
+    display: none;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #3a56d4;
+    color: white;
+}
+
+/* قسم البطل */
+.hero {
+    padding: 120px 0 60px;
+    background-color: var(--secondary-color);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* المنتجات */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 150px;
+    overflow: hidden;
+}
+
+.product-image video {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    overflow: hidden;
+
+}
+
+.product-card:hover .product-image video {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 10px;
+    background-color: aliceblue;
+}
+.button{
+    display: flex;
+    gap:10px;
+}
+.product-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.add-to-cart:hover {
+    background-color: #3a56d4;
+}
+.add-to-dtls {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+.add-to-dtls a{
+    text-decoration: none;
+    color: white;
+}
+.add-to-dtls:hover {
+    background-color: #3a56d4;
+}
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.filter-options{
+    display: flex;
+    width: auto;
+    gap: 20px;
+}
+
+
+
+.cart{
+    z-index: 9999;
+    display: none;
+    position: absolute;
+    position: fixed;
+    background-color: red;
+    height: auto;
+    width: 40%;
+    right: 28%;
+    top: 15%;
+}
+.cart video{
+    width: 100%;
+    height: 300px;
+}
+#pp{
+    text-align: left;
+    margin-left: 10px;
+    color: white;
+    
+}
+#discription{
+    color: white;
+    text-align: left;
+    margin-left: 10px;
+}
+.pric{
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+.button1{
+    display: flex;
+    height: auto;
+    width: 100%;
+    gap: 8px;
+    box-sizing: border-box;
+}
+.button1 button{
+    border: none;
+    width: 48%;
+    margin-top: 5px ;
+    margin-bottom: 5px;
+    height: 30px;
+    background-color: #4a6bff;
+    border-radius: 8px;
+    color: white;
+    
+}
+#buttonn{
+    margin-right: 5px;
+}
+
+.button1 button:hover{
+    background-color: #3a56d4;
+}
+.star{
+    color: rgb(248, 179, 2);
+    cursor: pointer;
+}
+.stars{
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+.price{
+    display: flex;
+    gap: 10px;
+}
+.original-price{
+    color: #f62e2eb1;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.product-description{
+    display: none;
+}
+
+
+
+/* التصميم المتجاوب */
+@media (max-width: 400px) {
+    .filter-optionn{
+        width: 100%;
+        display: grid;
+        list-style: none;
+        text-align: center;
+        
+    }
+    .filter-optionn:hover{
+        background-color: #dce0f4;
+    }
+    .filter-options{
+        display: grid;
+        width: auto;
+        background-color: #f5f7ff;
+    }
+    .sidebar-content{
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    .navbar.active {
+        right: 0;
+    }
+    .navbar.remov{
+        right: -100%;
+    }
+    .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .hero {
+        padding-top: 80px;
+        text-align: center;
+    }
+
+    .hero-image {
+        display: none;
+    }
+}
